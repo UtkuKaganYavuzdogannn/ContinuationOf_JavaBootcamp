@@ -1,4 +1,4 @@
-package com.turkcell.product_service.controller;
+package com.turkcell.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
