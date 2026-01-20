@@ -1,0 +1,29 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9094
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9094
+      bindings:
+        orderCreated-out-0:
+          destination: order-topic
+          contentType: application/json
+  application:
+    name: order-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/order_service
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: orderservice_db_password
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8082
